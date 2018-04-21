@@ -12,6 +12,7 @@ public class Main
 //        System.out.print(" "); // Pinta de preto
 //        System.out.print("\033[40;7;35m \033[0m"); // Pinta de magenta
 
+        ///vai filhao
         ArrayList <Motocicleta> motinhas = new ArrayList<>();
         ArrayList <Carro> carros = new ArrayList<>();
         ArrayList <Caminhao> caminhoes = new ArrayList<>();
