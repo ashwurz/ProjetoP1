@@ -49,14 +49,18 @@ public class Main
             }
 
             mapa.colocaMapa(motinhas, carros, caminhoes);
-            /*
+
             System.out.print("\033[40;7;31m  \033[0m Motocicletas vivas:" + motinhas.size() + "    ");
             System.out.print("\033[40;7;32m  \033[0m Carros vivos:" + carros.size() + "    ");
             System.out.print("\033[40;7;34m  \033[0m Caminhoes vivos:" + caminhoes.size() + "    ");
             System.out.println("");
-            */
-            //mapa.impressao();
 
+            mapa.impressaoMundo();
+
+            System.out.print("\033[40;7;31m  \033[0m Motocicletas mortos:" + mapa.getContaMotinhaMorre() + "    ");
+            System.out.print("\033[40;7;32m  \033[0m Carros mortos:" + mapa.getContaCarroMorre() + "    ");
+            System.out.print("\033[40;7;34m  \033[0m Caminhoes mortos:" + mapa.getContaCaminhaoMorre() + "    ");
+            System.out.println();
             try {
                 Thread.sleep(333);
             } catch (Exception e) {

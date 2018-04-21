@@ -9,6 +9,9 @@ public class Mapa {
      */
     public Mapa(){
         refazMapa();
+        setContaCaminhaoMorre(contaCaminhaoMorre);
+        setContaCarroMorre(contaCarroMorre);
+        setContaMotinhaMorre(contaMotinhaMorre);
     }
 
     public void refazMapa(){///<A função refazMapa tem como objetivo, resetar o mapa ao que era inicialmente.
@@ -328,23 +331,33 @@ public class Mapa {
                 contaCaminhaoMorre += 2;
                 mapa[xAtual][yAtual] = mapaInicial[xAtual][yAtual];
 
-                System.out.print("\033[40;7;31m  \033[0m Motocicletas vivas:" + motinhas.size() + "    ");
-                System.out.print("\033[40;7;32m  \033[0m Carros vivos:" + carros.size() + "    ");
-                System.out.print("\033[40;7;34m  \033[0m Caminhoes vivos:" + caminhoes.size() + "    ");
-                System.out.println();
-
-                impressaoMundo();
-
-                System.out.print("\033[40;7;31m  \033[0m Motocicletas mortos:" + contaMotinhaMorre + "    ");
-                System.out.print("\033[40;7;32m  \033[0m Carros mortos:" + contaCarroMorre + "    ");
-                System.out.print("\033[40;7;34m  \033[0m Caminhoes mortos:" + contaCaminhaoMorre + "    ");
-                System.out.println();
             }
         }
     }
 
+    public void setContaCarroMorre(int contaCarroMorre){
+        this.contaCarroMorre = contaCarroMorre;
+    }
 
+    public void setContaMotinhaMorre(int contaMotinhaMorre){
+        this.contaMotinhaMorre = contaMotinhaMorre;
+    }
 
+    public void setContaCaminhaoMorre(int contaCaminhaoMorre){
+        this.contaCaminhaoMorre = contaCaminhaoMorre;
+    }
+
+    public int getContaCarroMorre(){
+        return contaCarroMorre;
+    }
+
+    public int getContaMotinhaMorre(){
+        return contaMotinhaMorre;
+    }
+
+    public int getContaCaminhaoMorre(){
+        return contaCaminhaoMorre;
+    }
 
     public void impressaoMundo() {
         for (int i = 0; i < 60; i++) {
