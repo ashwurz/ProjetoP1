@@ -142,7 +142,9 @@ public class Mapa {
             };
 
     private int mapa[][];///<Mapa 60x60 onde serão inseridos os veículos.
-
+    private int contaCarroMorre = 0;
+    private int contaMotinhaMorre = 0;
+    private int contaCaminhaoMorre = 0;
     /**
      * A função colocaMapa recebe como parâmetro tem como objetivo realizar a inserção dos veículos no mapa e enquanto isso, realiza a verificação para saber se não ocorreu nenhuma batida e caso tenha ocorrido, realiza a destruição dos veículos, esse método realiza a verificação para saber se o veículo entrou em uma indústria e caso o tenha feito, realiza a sua duplicação.
      * @param motinhas Array de motocicletas.
@@ -201,6 +203,7 @@ public class Mapa {
                 }
                 i--;
                 motinhas.remove(i);///remove a motocicleta na posição i.
+                contaMotinhaMorre += 2;
                 i--;
 
                 mapa[xAtual][yAtual] = mapaInicial[xAtual][yAtual];///<como as motocicletas foram destruidas é necessário que os XY do mapa voltem a sua forma original, por isso é igualada as posições XY do mapa com as posições XY do mapaInicial.
@@ -235,6 +238,7 @@ public class Mapa {
                     if (motinhas.get(j).getposX() == xAtual && motinhas.get(j).getposY() == yAtual)
                     {
                         motinhas.remove(j);
+                        contaMotinhaMorre++;
                         break;
                     }
                 }
@@ -253,7 +257,7 @@ public class Mapa {
                 i--;
                 carros.remove(i);
                 i--;
-
+                contaCarroMorre +=2 ;
                 mapa[xAtual][yAtual] = mapaInicial[xAtual][yAtual];
             }
         }
@@ -285,6 +289,7 @@ public class Mapa {
                     if (motinhas.get(j).getposX() == xAtual && motinhas.get(j).getposY() == yAtual)
                     {
                         motinhas.remove(j);
+                        contaMotinhaMorre++;
                         break;
                     }
                 }
@@ -299,6 +304,7 @@ public class Mapa {
                     if (carros.get(j).getposX() == xAtual && carros.get(j).getposY() == yAtual)
                     {
                         carros.remove(j);
+                        contaCarroMorre++;
                         break;
                     }
                 }
@@ -319,13 +325,28 @@ public class Mapa {
                 i--;
                 caminhoes.remove(i);
                 i--;
-
+                contaCaminhaoMorre += 2;
                 mapa[xAtual][yAtual] = mapaInicial[xAtual][yAtual];
+
+                System.out.print("\033[40;7;31m  \033[0m Motocicletas vivas:" + motinhas.size() + "    ");
+                System.out.print("\033[40;7;32m  \033[0m Carros vivos:" + carros.size() + "    ");
+                System.out.print("\033[40;7;34m  \033[0m Caminhoes vivos:" + caminhoes.size() + "    ");
+                System.out.println();
+
+                impressaoMundo();
+
+                System.out.print("\033[40;7;31m  \033[0m Motocicletas mortos:" + contaMotinhaMorre + "    ");
+                System.out.print("\033[40;7;32m  \033[0m Carros mortos:" + contaCarroMorre + "    ");
+                System.out.print("\033[40;7;34m  \033[0m Caminhoes mortos:" + contaCaminhaoMorre + "    ");
+                System.out.println();
             }
         }
     }
 
-    public void impressao() {
+
+
+
+    public void impressaoMundo() {
         for (int i = 0; i < 60; i++) {
             for (int j = 0; j < 60; j++) {
                 if (mapa[i][j] == 0) {
