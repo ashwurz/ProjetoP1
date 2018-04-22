@@ -14,8 +14,8 @@ public class Veiculos {
         setIndustria(true);
         setVelocidade(velocidade);
         setCor(cor);
-        setposX(numAleatorio.nextInt(60));
-        setposY(numAleatorio.nextInt(60));
+        setposX(numAleatorio.nextInt(30));
+        setposY(numAleatorio.nextInt(30));
     }
 
     public void setVelocidade(int velocidade) {///< Função que define a velocidade do veiculo, é passa um valor int como parâmetro.
@@ -63,54 +63,40 @@ public class Veiculos {
         if (move == 0){///< Condição que define o movimento para cima.
             posy -= getVelocidade();///<caso a variável move seja igual a 0, a posição y é setada como a atual menos a sua velocidade, o que faz com que o movimento seja para cima.
             if (posy < 0){///<Condição que verifica se a posição Y é inferior a 0.
-                posy += 60; ///<caso a condição acima tenha sido atendida, é adicionado em 60 para que o veículo surja do lado oposto.
+                posy += 30; ///<caso a condição acima tenha sido atendida, é adicionado em 30 para que o veículo surja do lado oposto.
             }                   ///<
-            else if (posy > 59){///<Condição que verifica se a posição Y é superior a 59.
-                posy -= 60;///<caso a condição acima tenha sido atendida, é subtraido em 60 para que o veículo surja do lado oposto.
+            else if (posy > 29){///<Condição que verifica se a posição Y é superior a 29.
+                posy -= 30;///<caso a condição acima tenha sido atendida, é subtraido em 30 para que o veículo surja do lado oposto.
             }                   ///<
         }                           ///<
         else if (move == 1){///<Condição que define o movimento para baixo.
             posy += getVelocidade();///<Caso a variável move seja igual a 1, a posição y é setada como a atual mais a sua velocidade, o que faz com que o seu movimento seja para baixo.
             if (posy < 0){///<Condição que verifica se a posição Y é inferior a 0.
-                posy += 60; ///<caso a condição acima tenha sido atendida, é adicionado em 60 para que o veículo surja do lado oposto.
+                posy += 30; ///<caso a condição acima tenha sido atendida, é adicionado em 30 para que o veículo surja do lado oposto.
             }                   ///<
-            else if (posy > 59){///<Condição que verifica se a posição Y é superior a 59.
-                posy -= 60;///<caso a condição acima tenha sido atendida, é subtraido em 60 para que o veículo surja do lado oposto.
+            else if (posy > 29){///<Condição que verifica se a posição Y é superior a 29.
+                posy -= 30;///<caso a condição acima tenha sido atendida, é subtraido em 30 para que o veículo surja do lado oposto.
             }                   ///<
         }                       ///<
         else if (move == 2){///<Condição que define o movimento do veículo para a direita.
             posx += getVelocidade();///<Caso a variável move seja igual a 2, a posição x é setada como a atual mais sua velocidade, o que faz com que o movimento seja para a direita.
             if (posx < 0){///<Condição que verifica se a posição X é inferior a 0.
-                posx += 60;///< caso a condição acima tenha sido atendida, é adicionado 60 para que o veículo surja do lado oposto.
+                posx += 30;///< caso a condição acima tenha sido atendida, é adicionado 30 para que o veículo surja do lado oposto.
             }               ///<
-            else if (posx > 59){///<Condição que verifica se a posição X é superior a 59.
-                posx -= 60;///<caso a condição acima tenha sido atendiada, é subtraido em 60 para que o veículo surja do lado oposto.
+            else if (posx > 29){///<Condição que verifica se a posição X é superior a 29.
+                posx -= 30;///<caso a condição acima tenha sido atendiada, é subtraido em 30 para que o veículo surja do lado oposto.
             }                       ///<
         }                           ///<
         else if (move == 3){///<Condição que define o movimento do veículo para a esquerda.
             posx -= getVelocidade();///<Caso a variável move seja igual a 3, a posição x é setada como a atual menos a sua velocidade, o que faz com que o movimento seja para a esquerda.
             if (posx < 0){///<Condição que verifica se a posição X é inferior a 0.
-                posx += 60;///<Caso a condição acima tenha sido atendida,é adicionado 60 para que o veículo surja do lado oposto.
+                posx += 30;///<Caso a condição acima tenha sido atendida,é adicionado 30 para que o veículo surja do lado oposto.
             }               ///<
-            else if (posx > 59){///<Condição que verifica se a posição X é superior a 59.
-                posx -= 60;     ///<caso a condição acima tenha sido atendiada, é subtraido em 60 para que o veículo surja do lado oposto.
+            else if (posx > 29){///<Condição que verifica se a posição X é superior a 29.
+                posx -= 30;     ///<caso a condição acima tenha sido atendiada, é subtraido em 30 para que o veículo surja do lado oposto.
             }                   ///<
         }                       ///<
 
-        /*
-        if (posx < 0){///<Condição que verifica se a posição X é inferior a 0 e em caso positivo é adicionado 37 para que o veículo surja do lado oposto
-            posx += 60;///<
-        }               ///<
-        else if (posx > 59){///<Condição que verifica se a posição X é superior a 36 e em caso positivo é subtraido em 37 para que o veículo surja do lado oposto
-            posx -= 60;     ///<
-        }                   ///<
-        else if (posy < 0){///<Condição que verifica se a posição Y é inferior a 0 e em caso positivo é adicionado em 37 para que o veículo surja do lado oposto
-            posy += 60;      ///<
-        }                   ///<
-        else if (posy > 59){///<Condição que verifica se a posição Y é superior a 36 e em caso positivo é subtraido em 37 para que o veículo surja do lado oposto
-            posy -= 60;     ///<
-        }                   ///<
-        */
     }
 
     protected int posx;///<Variável que guarda a posição X do veículo.

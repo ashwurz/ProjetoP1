@@ -18,16 +18,9 @@ public class Main
         ArrayList <Caminhao> caminhoes = new ArrayList<>();
         Mapa mapa = new Mapa();
 
-        for (int i = 0; i < 30; i++)
-        {
+        for(int i = 0; i < 10; i++){
             motinhas.add(new Motocicleta());
-        }
-
-        for(int i = 0; i< 20;i++){
             carros.add(new Carro());
-        }
-
-        for(int i = 0; i < 10;i++){
             caminhoes.add(new Caminhao());
         }
 
@@ -50,6 +43,7 @@ public class Main
 
             mapa.colocaMapa(motinhas, carros, caminhoes);
 
+            System.out.println("======================================================================");
             System.out.print("\033[40;7;31m  \033[0m Motocicletas vivas:" + motinhas.size() + "    ");
             System.out.print("\033[40;7;32m  \033[0m Carros vivos:" + carros.size() + "    ");
             System.out.print("\033[40;7;34m  \033[0m Caminhoes vivos:" + caminhoes.size() + "    ");
@@ -67,23 +61,6 @@ public class Main
                 e.printStackTrace();
             }
 
-         /*   try
-            {
-                final String os = System.getProperty("os.name");
-
-                if (os.contains("Windows"))
-                {
-                    Runtime.getRuntime().exec("cls");
-                }
-                else
-                {
-                    Runtime.getRuntime().exec("clear");
-                }
-            }
-            catch (final Exception e)
-            {
-                //  Handle any exceptions.
-            }*/
         }
 
         System.out.println("Morreu todo mundo!!! :*( ");
