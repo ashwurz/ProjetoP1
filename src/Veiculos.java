@@ -1,6 +1,6 @@
 import java.util.Random;
 /**
- * Aqui é o inicio da classe Veiculo
+ * A classe Veículo é a classe "pai". Aqui são criadas as funções que geram o movimento do véiculo, a posição inicial dele, informa se o veículo entrou na indústria ou não.
  */
 public class Veiculos {
 
@@ -96,10 +96,14 @@ public class Veiculos {
         }
 
     }
-
-    protected int posx;///Variável que guarda a posição X do veículo.
-    protected int posy;///Variável que guarda a posição Y do veículo.
-    protected int velocidade;///Variável que guarda a velocidade do veículo.
-    protected int cor;///Variável que guarda o valor em int que representa a cor do carro.
-    protected boolean industria;///Variável que guarda o valor em Boolean que mostra se o veículo já passou pela indústria ou não.
+    ///Variável que guarda a posição X do veículo.
+    protected int posx;
+    ///Variável que guarda a posição Y do veículo.
+    protected int posy;
+    ///Variável que guarda a velocidade do veículo.
+    protected int velocidade;
+    ///Variável que guarda o valor em int que representa a cor do carro.
+    protected int cor;
+    ///Variável que guarda o valor em Boolean que mostra se o veículo já passou pela indústria ou não.
+    protected boolean industria;
 }

@@ -1,5 +1,5 @@
 /**
- * Aqui é criada a classe Caminhao que herda de Veiculo
+ * A classe Caminhao que herda de Veiculos
  */
 public class Caminhao extends Veiculos{
     /**

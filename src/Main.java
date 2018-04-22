@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * Aqui é criada a classe Main.
+ * A classe Main é onde tudo é executado.
  */
 public class Main
 {
@@ -57,7 +57,7 @@ public class Main
 
             mapa.impressaoMundo();///Chama a função impressaoMundo, que realiza a impressão do Mapa
 
-            System.out.print("\033[40;7;31m  \033[0m Motocicletas mortos:" + mapa.getContaMotinhaMorre() + "    ");///Impressão do contador de motocicletas destruídas.
+            System.out.print("\033[40;7;31m  \033[0m Motocicletas mortas:" + mapa.getContaMotinhaMorre() + "    ");///Impressão do contador de motocicletas destruídas.
             System.out.print("\033[40;7;32m  \033[0m Carros mortos:" + mapa.getContaCarroMorre() + "    ");///Impressão do contador de carros destruídos.
             System.out.print("\033[40;7;34m  \033[0m Caminhoes mortos:" + mapa.getContaCaminhaoMorre() + "    ");///Impressão do contador de caminhões destruídos.
             System.out.println();

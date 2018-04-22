@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 
 /**
- * Aqui é criada a classe Mapa
+ * A classe Mapa é onde o mapa que é "printado" é gerado, aqui encontramos o mapa onde são inseridos os veículos, o mapa base inicial, os contadores de veículos que são destruídos, a função de impressão do mapa e o algoritmo responsável pela inserção os veículos no mapa.
  */
 public class Mapa {
     /**
-     * Aqui é criado o construtor Mapa, que retorna o mapa
+     * O construtor Mapa, e o mesmo recebe a função de rafazMapa e os set's dos contadores de veículos destruídos.
      */
     public Mapa(){
         refazMapa();
@@ -83,11 +83,14 @@ public class Mapa {
                     {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
                     {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
             };
-
-    private int mapa[][];///Mapa 30x30 onde serão inseridos os veículos.
-    private int contaCarroMorre = 0;///Variável que tem como objetivo fazer a contagem de carros destruídos.
-    private int contaMotinhaMorre = 0;///Variável que tem como objetivo fazer a contagem de motocicletas destruídas.
-    private int contaCaminhaoMorre = 0;///Variável que tem como objetivo fazer a contagem de caminhões destruídos
+    ///Mapa 30x30 onde serão inseridos os veículos.
+    private int mapa[][];
+    ///Variável que tem como objetivo fazer a contagem de carros destruídos.
+    private int contaCarroMorre = 0;
+    ///Variável que tem como objetivo fazer a contagem de motocicletas destruídas.
+    private int contaMotinhaMorre = 0;
+    ///Variável que tem como objetivo fazer a contagem de caminhões destruídos.
+    private int contaCaminhaoMorre = 0;
     /**
      * A função colocaMapa recebe como parâmetro tem como objetivo realizar a inserção dos veículos no mapa e enquanto isso, realiza a verificação para saber se não ocorreu nenhuma batida e caso tenha ocorrido, realiza a destruição dos veículos, esse método realiza a verificação para saber se o veículo entrou em uma indústria e caso o tenha feito, realiza a sua duplicação.
      * @param motinhas Array de motocicletas.

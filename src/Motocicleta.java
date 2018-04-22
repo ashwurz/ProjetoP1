@@ -1,5 +1,5 @@
 /**
- *Aqui é criada a classe Motocicleta que é herdada da classe Veiculos
+ *A classe Motocicleta que é herdada da classe Veiculos.
  */
 public class Motocicleta extends Veiculos{
     /**
