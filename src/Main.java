@@ -50,16 +50,16 @@ public class Main
             mapa.colocaMapa(motinhas, carros, caminhoes);///Chama a função colocaMapa e é passado como parâmetro os arraysLists de carros, caminhoes e motinhas.
 
             System.out.println("======================================================================");
-            System.out.print("\033[40;7;31m  \033[0m Motocicletas vivas:" + motinhas.size() + "    ");///Impressão do contador de motocicletas "vivas".
+            System.out.print("\033[40;7;34m  \033[0m Motocicletas vivas:" + motinhas.size() + "    ");///Impressão do contador de motocicletas "vivas".
             System.out.print("\033[40;7;32m  \033[0m Carros vivos:" + carros.size() + "    ");///Impressão do contador de carros "vivos".
-            System.out.print("\033[40;7;34m  \033[0m Caminhoes vivos:" + caminhoes.size() + "    ");///Impressão do contador de caminhões "vivos"
+            System.out.print("\033[40;7;31m  \033[0m Caminhoes vivos:" + caminhoes.size() + "    ");///Impressão do contador de caminhões "vivos"
             System.out.println();
 
             mapa.impressaoMundo();///Chama a função impressaoMundo, que realiza a impressão do Mapa
 
-            System.out.print("\033[40;7;31m  \033[0m Motocicletas mortas:" + mapa.getContaMotinhaMorre() + "    ");///Impressão do contador de motocicletas destruídas.
+            System.out.print("\033[40;7;34m  \033[0m Motocicletas mortas:" + mapa.getContaMotinhaMorre() + "    ");///Impressão do contador de motocicletas destruídas.
             System.out.print("\033[40;7;32m  \033[0m Carros mortos:" + mapa.getContaCarroMorre() + "    ");///Impressão do contador de carros destruídos.
-            System.out.print("\033[40;7;34m  \033[0m Caminhoes mortos:" + mapa.getContaCaminhaoMorre() + "    ");///Impressão do contador de caminhões destruídos.
+            System.out.print("\033[40;7;31m  \033[0m Caminhoes mortos:" + mapa.getContaCaminhaoMorre() + "    ");///Impressão do contador de caminhões destruídos.
             System.out.println();
             /**
              * Função que da um "delay" no loop WHILE.

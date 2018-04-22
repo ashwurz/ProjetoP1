@@ -397,13 +397,13 @@ public class Mapa {
                 } else if (mapa[i][j] == 1) {
                     System.out.print("\033[40;7;37m  \033[0m"); ///Pinta de cinza claro
                 } else if (mapa[i][j] == 2) {
-                    System.out.print("\033[40;7;35m  \033[0m"); ///Pinta de magenta
+                    System.out.print("\033[40;7;36m  \033[0m"); ///Pinta de verde água
                 } else if (mapa[i][j] == 3) {
-                    System.out.print("\033[40;7;31m  \033[0m"); ///Pinta de vermelho
+                    System.out.print("\033[40;7;34m  \033[0m"); ///Pinta de azul
                 } else if (mapa[i][j] == 4) {
                     System.out.print("\033[40;7;32m  \033[0m"); ///Pinta de verde
                 } else if (mapa[i][j] == 5) {
-                    System.out.print("\033[40;7;34m  \033[0m"); ///Pinta de azul
+                    System.out.print("\033[40;7;31m  \033[0m"); ///Pinta de vermelho
                 }
             }
             System.out.println();
