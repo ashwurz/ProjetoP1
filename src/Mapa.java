@@ -49,8 +49,8 @@ public class Mapa {
                         {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
                 };
     }
-
-    private int mapaInicial[][]=///Mapa 30x30 que será usado como base para toda vez que ocorrer uma batida substituir a posição XY do veículo que foi destruído pela original.
+    ///Mapa 30x30 que será usado como base para toda vez que ocorrer uma batida substituir a posição XY do veículo que foi destruído pela original.
+    private int mapaInicial[][]=
             {
                     {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
                     {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
